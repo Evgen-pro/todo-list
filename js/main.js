@@ -5,8 +5,15 @@ const taskInput = document.querySelector('#taskInput')
 const taskList = document.querySelector('#tasksList')
 const emptyList = document.querySelector('#emptyList')
 
-
+//adding task
 form.addEventListener('submit', addTask)
+
+//Deleting task
+taskList.addEventListener('click', deleteTask)
+
+function deleteTask(event) {
+    console.log(event.target)
+}
 
 function addTask(event) {
     //отменяем отправку формы
@@ -40,4 +47,5 @@ function addTask(event) {
     if (taskList.children.length > 1) {
         emptyList.classList.add('none')
     }
+
 }
